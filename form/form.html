@@ -1,0 +1,92 @@
+
+
+<div class="content-wrapper">
+               <h3>Add Documents </h3>
+               <div class="panel-body">
+                  
+                
+                  
+                   <flash-message name="flash-fixed" duration="5000"></flash-message>
+                  
+                  <form name="myForm" class="form-horizontal" ng-class="{'submitted': submitted}" ng-submit="myForm.$valid && insertData()" novalidate>
+                     
+                      
+                                   
+                      
+                        <div class="form-group">
+                           <label class="col-sm-2 control-label">Product Name</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-8">
+                              <input type="text" placeholder="Product Name" name="prod1" class="form-control" ng-model="pname" ng-required="true">
+                    <span style="color:red" ng-show="submitted && myForm.prod1.$touched && myForm.prod1.$invalid">The Product Name is required.</span>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label class="col-sm-2 control-label">Product Price</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-8">
+                              <input type="number" placeholder="Product Price" class="form-control" name="prod2" ng-model="pprice" ng-required="true">
+                                <span style="color:red" ng-show="submitted && myForm.prod2.$touched && myForm.prod2.$invalid">The Product Price is required.</span>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label class="col-sm-2 control-label">Product Rating</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-8">
+                               <input type="number" placeholder="Product Rating" class="form-control" name="prod3" ng-model="prating" ng-required="true">
+                               <span style="color:red" ng-show="submitted && myForm.prod3.$touched && myForm.prod3.$invalid">The Product Rating is required.</span>
+                                         </div>
+                        </div>                       
+                        
+ <div class="form-group">
+                           <label class="col-sm-2 control-label">Product Description</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-8">
+                            
+                              <div class="input-group">
+                                 <textarea class="form-control custom-control" placeholder="Product Description" name="prod4" ng-model="pdescription" rows="6" cols="120" style="resize:none" ng-required="true"></textarea>
+                                  <span style="color:red" ng-show="submitted && myForm.prod4.$touched && myForm.prod4.$invalid">The Product Description is required.</span>
+                              </div>
+                           </div>
+                        </div>
+                      
+                      <div class="form-group">
+                           <label class="col-sm-2 control-label">Product Images</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-8"> 
+                                   <input type="file"  class="form-control custom-control" file-model="myFile"  name="prod5" ng-required="true">
+                               <span style="color:red" ng-show="submitted && myForm.prod5.$touched && myForm.prod5.$invalid">The Product Image is required.</span>
+
+                           </div>
+                        </div>
+                    
+                    
+                    
+                    <center>
+                         <button type="submit" class="btn btn-primary btn-lg" ng-click="submitted= true;">Submit</button>
+                    
+                        <button type="button" class="btn btn-danger btn-lg" ng-click="formclear()">Clear</button>
+                    </center>
+                          
+                    
+              
+                  </form>
+                  
+                  
+               </div>
+            </div>
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                               
+                       
